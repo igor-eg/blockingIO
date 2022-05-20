@@ -3,11 +3,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
-
+    private static final int PORT = 23444;
     public static void main(String[] args) throws IOException {
+
         System.out.println("Server started");
         //  Занимаем порт, определяя серверный сокет
-        ServerSocket servSocket = new ServerSocket(23444);
+        ServerSocket servSocket = new ServerSocket(PORT);
         while (true) {
             //  Ждем подключения клиента и получаем поток и для дальнейшей работы
             try (Socket socket = servSocket.accept();
