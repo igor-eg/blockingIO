@@ -20,7 +20,8 @@ public class Client {
                     if ("end".equals(msg)) break;
                 }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
     }
 }
